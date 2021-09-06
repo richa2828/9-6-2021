@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+            div{
+                width:230px;
+                height:300px;
+                background-color: brown;
+                margin: auto;
+                border-radius: 30px;
+                border:10px solid teal;
+                box-shadow: 5px 10px teal;
+            }
+            nav>input
+            {
+                width:230px;
+                height: 50px;
+                
+
+                
+            }
+            input{
+                width:50px;
+                height:50px;
+                border-radius: 50px;
+                
+            }
+            button
+            {
+                float: right;
+                width:230px;
+                border-radius: 30px;
+                background-color: teal;
+            }
+        </style>
+
+    </head>
+    <body>
+        <p id="demo"></p>
+        <div><nav><input type="text"></nav>
+            <table>
+                <tr><td><input type="button" value="1" onclick="f1('1')"></td>
+                    <td><input type="button" value="2" onclick="f1('2')"></td>
+                    <td><input type="button" value="3" onclick="f1('3')"></td>
+                    <td><input type="button" value="+" onclick="f1('+')"></td>
+                </tr>
+                <tr><td><input type="button" value="4" onclick="f1('4')"></td>
+                    <td><input type="button" value="5" onclick="f1('5')"></td>
+                    <td><input type="button" value="6" onclick="f1('6')"></td>
+                    <td><input type="button" value="-" onclick="f1('-')"></td>
+                </tr>
+                <tr><td><input type="button" value="7" onclick="f1('7')"></td>
+                    <td><input type="button" value="8" onclick="f1('8')"></td>
+                    <td><input type="button" value="9" onclick="f1('9')"></td>
+                    <td><input type="button" value="*" onclick="f1('*')"></td>
+                </tr>
+                <tr><td><input type="button" value="0" onclick="f1('0')"></td>
+                    <td><input type="button" value="/" onclick="f1('/')"></td>
+                    <td><input type="button" value="=" onclick="f1('=')"></td>
+                    <td><input type="button" value="BC" onclick="f1()"></td>
+                </tr>
+            </table>
+            <button>CLEAR</button>
+        </div>
+        <script>
+            function f1(a)
+            {
+                console.log(a)
+            }
+        
+
+        </script>
+    </body>
+</html>

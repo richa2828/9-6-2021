@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="button" value="btn" onclick="f1()">
+        <p id="demo"></p>
+        <script>
+            function f1()
+            {
+                var xhttp= new XMLHttpRequest();
+                    xhttp.onreadystatechange=function()
+                    {
+                        if(this.readyState==4&&this.status)
+                        
+                        {
+                           // document.getElementById("demo").innerHTML=this.responseText;
+                           var myobj=JSON.parse(this.responseText);
+                           var data="<table>"
+                             data+="<thead><td>name</td><td>age</td><td>address</td></thead>"
+                             for(var d in myobj)
+                             {
+                                 data+="<tr>"
+                                    data+="<td>"+myobj[d].name+"</td>"
+                                    data+="<td>"+myobj[d].age+"</td>"
+                                    data+="<td>"+myobj[d].address+"</td>"
+                                    data+="</tr>"
+                             }
+                             data="</table>"
+                             document.getElementById("demo").innerHTML=data;
+
+                        }
+                    }
+                    xhttp.open("get","ajax2ndway.Json",true)
+                    xhttp.send()
+            }
+        </script>
+    </body>
+</html>

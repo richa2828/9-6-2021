@@ -1,0 +1,33 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <input type="button" value="clickme" onclick="f1()">
+        <script>
+            function f1()
+            {
+                var condition=false;
+                var porm=new Promise(function(resolve,reject)
+                {
+                    if(condition)
+                    {
+                        resolve("i am success")
+                    }
+                    else
+                    {
+                        reject("i am not success")
+                    }
+                })
+             .then(function(result)
+             {
+                 console.log(result)
+             })
+             .catch(function(error)
+             {
+                 console.log(error)
+             })
+            }
+        </script>
+    </body>
+</html>

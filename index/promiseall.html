@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <body>
+            <input type="button" value="clickme" onclick="f1()">
+            <script>
+                function f1()
+                {
+                    var p1=new Promise(function(resolve,reject)
+                    {
+                        setTimeout(function()
+                        )
+                        console.log("first promise")
+                        resolve("first")
+                    });
+                    var p2=new Promise(function(resolve,reject)
+                    {
+                        console.log("second promise")
+                        resolve("second")
+                    });
+                    Promise.all([p1+p2]).then().catch()
+
+                }
+
+            </script>
+        </body>
+    </head>
+</html>
